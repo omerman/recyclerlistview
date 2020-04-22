@@ -526,7 +526,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
                 this._checkExpectedDimensionDiscrepancy(itemRect, type, dataIndex);
             }
             return (
-                <ViewRenderer key={key} data={data}
+                <ViewRenderer key={data.viewKey || key} data={data}
                     dataHasChanged={this._dataHasChanged}
                     x={itemRect.x}
                     y={itemRect.y}
